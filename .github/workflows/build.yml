@@ -27,5 +27,6 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}:latest
-            ghcr.io/${{ github.repository }}:${{ github.sha }}
+            ghcr.io/${{ github.repository_owner | toLowerCase }}/$(echo ${{ github.event.repository.name }} | tr '[:upper:]' '[:lower:]'):latest
+            ghcr.io/${{ github.repository_owner | toLowerCase }}/$(echo ${{ github.event.repository.name }} | tr '[:upper:]' '[:lower:]'):${{ github.sha }}
+
