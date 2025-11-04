@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   app:
-    image: ghcr.io/Azus34/mi-proyecto-cicd:latest
+    image: ghcr.io/azus34/mi-proyecto-cicd:latest
     container_name: mi-app-cicd
     ports:
       - "80:3000"
